@@ -1,5 +1,5 @@
 const passport = require("passport");
-const User = require("./mongodb");
+const User = require("./src/mongodb");
 const GoogleStrategy = require('passport-google-oauth20').Strategy
 
 const GOOGLE_CLIENT_ID = "33430189365-r3o47kb2769or6oorvc2su444grq454e.apps.googleusercontent.com"
