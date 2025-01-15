@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/brand/fit-logo-circle.png">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Log in</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="../assets/brand/fit-logo-circle.png">
+    </div>
+    <div class="signin-block">
+        <div class="logo-signin">
+            <img src="../assets/brand/fit-logo-circle.png">  
+        </div>
+        <h2>Welcome Back!</h2>
+        <p>Don't have an account? <a href="/signup">Sign up</a></p>
+        <div class="man">
+            <img src="../assets/brand/young man sitting in front of laptop.png">
+        </div>
+        <div class="error" id="error"></div>
+        <form id="signin-form">
+            <div class="signin-input">
+                <p>Email</p>
+                <input type="email" name="email" id="email">
+                <p>Password</p>
+                <input type="password" name="password" id="password">
+            </div>
+            <div class="bottom-wrapper">
+                <button type="submit">Login</button>
+                <div class="or">
+                    <hr>
+                    <p>OR</p>
+                    <hr>
+                </div>
+        </form>
+                <button id="google">
+                    <img src="../assets/brand/google.png">
+                    <a href="/auth/google">Sign in with Google</a>
+                </button>
+            </div>
+        
+    </div>
+
+    <script>
+        document.getElementById("signin-form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const email = document.getElementById("email").value
+            const password = document.getElementById("password").value
+            let errorResp = document.getElementById("error")
+
+            if (!email || !password) {
+                errorResp.innerText = "Please fill in all information";
+                return;
+            }
+
+            try {
+                const response = await fetch("/login", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({email, password})
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    if (!result.success) {
+                        errorResp.innerText = result.message;
+                    }
+                    else{
+                        window.location.href = result.redirect;
+                    }
+                }
+                else {
+                    console.error("Response error")
+                }
+            }
+            catch (e) {
+                console.error("Error fetching response: " + e)
+            }
+        })
+    </script>
+</body>
+</html>

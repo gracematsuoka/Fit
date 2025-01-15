@@ -1,0 +1,541 @@
+.top-container{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.profile-photo{
+    width: 61px;
+    height: 61px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.profile-nav{
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 90px;
+    width: 170px;
+    height: 100px;
+    border-radius: 15px;
+    background-color: #fffefab6;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-nav a{
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-buttons{
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    gap: 16px;
+}
+
+.nav-buttons button {
+    color: white;
+    background-color: #5f7f4bb3;
+    font-size: 22px;
+    border-radius: 100px;
+    width: 160px;
+    height: 47px;
+    border: none;
+    cursor: pointer;
+}
+
+#outfits-btn{
+    background-color: var(--main-color);
+}
+
+.top-container h2{
+    position: absolute;
+    bottom: 70px;
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+}
+
+h2 span{
+    color: var(--main-color)
+}
+
+.bottom-container{
+    height: 80vh;
+    width: 100%;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.outfits-page{
+    width: 650px;
+    height: 335px;
+    border-radius: 50px;
+    background-color: var(--med-tan);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 1.2s ease;
+}
+
+.outfits-page .pre-fit-form{
+    text-align: center;
+    display: block;
+}
+
+.outfits-page .pre-fit-form p{
+    width: 520px;
+    height: auto;
+    font-size: 24px;
+}
+
+.outfits-page .pre-fit-form h5{
+    margin-top: 10px;
+    font-size: 28px;
+}
+
+.outfits-page .pre-fit-form button{
+    color: white;
+    font-size: 22px;
+    width: 142px;
+    height: 47px;
+    border-radius: 100px;
+    background-color: var(--dark-tan);
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.outfits-page .fit-form{
+    text-align: center;
+    display: none;
+}
+
+.outfits-page .fit-form p{
+    font-size: 15px;
+}
+
+.outfits-page .fit-form h4{
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.outfits-page .fit-form .options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    gap: 10px
+}
+
+.outfits-page .fit-form .options div{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    gap: 10px;
+    width: 170px;
+    text-align: left;
+}
+
+.outfits-page .fit-form .options div label input{
+    margin-left: 30px;
+}
+
+.outfits-page .fit-form .options div label span{
+    margin-left: 10px;
+}
+
+.outfits-page .fit-form .options div input[type="radio"]:checked{
+    accent-color: black;
+}
+
+.outfits-page .fit-form button {
+    margin-top: 30px;
+    border-radius: 100px;
+    width: 142px;
+    height: 47px;
+    background-color: var(--med-tan);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.outfits-page .fit-result {
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.outfits-page .fit-result .main-view{
+    width: 828px;
+    height: 544px;
+    background-color: var(--med-tan);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px
+}
+
+.outfits-page .fit-result .main-view .top-desc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    overflow: hidden;
+    width: 700px;
+    height: 200px;
+    position: relative;
+    top: 0px;
+}
+
+.outfits-page .fit-result .main-view .top-desc .move-top{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: absolute;
+}
+
+#moveT-fit1 {
+    transform: translateX(0);
+    transition: 0.8s;
+}
+
+#moveB-fit1 {
+    transform: translateX(0);
+    transition: 0.8s;
+}
+
+#moveT-fit2 {
+    transform: translateX(-200%);
+    transition: 0.8s;
+}
+
+#moveB-fit2 {
+    transform: translateX(-200%);
+    transition: 0.8s;
+}
+
+#moveT-fit3 {
+    transform: translateX(200%);
+    transition: 0.8s;
+}
+
+#moveB-fit3 {
+    transform: translateX(200%);
+    transition: 0.8s;
+}
+
+.outfits-page .fit-result .main-view .top-desc svg{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+
+.outfits-page .fit-result .main-view .top-desc img{
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 2px;
+    margin-left: 0px;
+}
+
+.outfits-page .fit-result .main-view .top-desc .fit-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 50px;
+}
+
+.outfits-page .fit-result .main-view .top-desc .fit-text h2{
+    color: var(--main-color);
+    font-size: 28px;
+    margin-left: 0;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.outfits-page .fit-result .main-view .top-desc .fit-text li{
+    font-size: 22px;
+    margin-left: 30px;
+}
+
+.outfits-page .fit-result .main-view .items-bar{
+    background-color: #fffefa;
+    width: 718px;
+    height: 235px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.outfits-page .fit-result .main-view .items-bar .move-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.8s;
+    position: absolute;
+}
+
+.outfits-page .fit-result .main-view .items-bar h2{
+    letter-spacing: 3px;
+    color: var(--med-tan);
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.outfits-page .fit-result .main-view .items-bar ul{
+    display: flex;
+    list-style-type: none;
+    gap: 20px
+}
+
+.outfits-page .fit-result .main-view .items-bar ul img{
+    height: 110px;
+    width: 110px;
+    object-fit: cover;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
+}
+
+.outfits-page .fit-result .sidebar {
+    width: 318px;
+    height:544px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+}
+
+.outfits-page .fit-result .sidebar h2 p{
+    font-size: 15px;
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    font-weight: normal;
+    letter-spacing: 0;
+    display: none;
+}
+
+.outfits-page .fit-result .sidebar h2{
+    display: flex;
+    gap: 8px;
+}
+
+.outfits-page .fit-result .sidebar h2 img{
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+}
+
+.outfits-page .fit-result .sidebar h2 img:hover + #newfit{
+    display: block
+}
+
+.outfits-page .fit-result .sidebar .sidebar-fit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 262px;
+    height: 143px;
+    border-radius: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.outfits-page .fit-result .sidebar .sidebar-fit p{
+    font-size: 17px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.outfits-page .fit-result .sidebar .sidebar-fit img{
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 30px;
+    border-style: solid;
+    border-color: black;
+}
+
+.outfits-page .fit-result .sidebar h2{
+    font-size: 32px;
+    color: var(--main-color);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.weather-page{
+    width: 513px;
+    height: 508px;
+    background-color: var(--med-tan);
+    border-radius: 48px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.weather-page p{
+    font-size: 20px;
+}
+
+.weather-page h3{
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.weather-page h1{
+    font-size: 135px;
+}
+
+.weather-page h5{
+    font-size: 18px;
+    background-color: #DCD6BD;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-weight: normal;
+    border-radius: 100px;
+}
+
+.weather-page h2{
+    font-size: 70px;
+    margin-top: 20px;
+}
+
+.aesthetic-page{
+    display: none;
+}
+
+.aesthetic1{
+    display: none;
+}
+
+div .aesthetic-container1{
+    width: 920px;
+    height: 451px;
+    border-radius: 25px;
+    background-color: var(--med-tan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px
+}
+
+div .aesthetic1 div h3{
+    font-size: 40px;
+    text-align: right;
+}
+
+div div .aesthetic-container1 p{
+    width: 380px;
+    height: auto;
+    margin-top: 10px;
+    text-align: right;
+    font-size: 24px;
+}
+
+div div .aesthetic-container1 .aes-emoji-container{
+    width: 272px;
+    height: 311px;
+    border-radius: 50px;
+    background-color: var(--light-tan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div div .aesthetic-container1 .aes-emoji-container img{
+    width: 233px;
+    height: auto;
+}
+
+.aesthetic2{
+    display: none;
+}
+
+.aes-wrapper2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.aes-wrapper2 h1{
+    position: absolute;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+div .aesthetic-container2{
+    width: 611px;
+    height: 451px;
+    border-radius: 25px;
+    background-color: var(--med-tan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px
+}
+
+div .aesthetic2 div h3{
+    font-size: 40px;
+    text-align: right;
+}
+
+div div .aesthetic-container2 p{
+    width: 264px;
+    height: auto;
+    margin-top: 10px;
+    text-align: right;
+    font-size: 20px;
+}
+
+div div .aesthetic-container2 .aes-emoji-container{
+    width: 272px;
+    height: 311px;
+    border-radius: 50px;
+    background-color: var(--light-tan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div div .aesthetic-container2 .aes-emoji-container img{
+    width: 233px;
+    height: auto;
+}

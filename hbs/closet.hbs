@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/brand/fit-logo-circle.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../css/closet.css">
+    <title>{{name}}'s Closet</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="../assets/brand/fit-logo-circle.png">
+    </div>
+    <div class="top-container">
+        <img class="profile-photo" id="profile-photo" src="../assets/brand/profile-green.png">
+        <div class="profile-nav" id="profile-nav">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"/></svg>
+            <a href="/logout">Logout</a>
+        </div>
+        <h2>Welcome to your closet, <span>{{name}}</span></h2>
+        <div class="nav-buttons">
+            <button id="outfits-btn">Outfits</button>
+            <button id="weather-btn">Weather</button>
+            <button id="aesthetic-btn">Aesthetic</button>
+        </div>
+    </div>
+    <div class="bottom-container">
+        <div class="outfits-page" id="outfits-page">
+            <div class="pre-fit-form" id="pre-fit-form">
+                <p>Based on given information about yourself and your upcoming day, we will provide you with three outfit choices tailored just to you!</p>
+                <h5>Ready to get styled?</h5>
+                <button id="go">
+                    Let's Go
+                </button>
+            </div>
+            <form id="fit-form" class="fit-form">
+                <p>Questions below are <b>optional</b> but can help us style you better</p>
+                <h4>Specific Occasion</h4>
+                <div class="options">
+                    <div class="options-left">
+                        <label>
+                            <input type="radio" name="occasion" value="party"><span>Party</span></input>
+                        </label>
+                        <label>
+                            <input type="radio" name="occasion" value="school"><span>School</span></input>
+                        </label>
+                        <label>
+                            <input type="radio" name="occasion" value="wedding"><span>Wedding</span></input>
+                        </label>
+                    </div>
+                    <div class="options-right">
+                        <label>
+                            <input type="radio" name="occasion" value="work"><span>Work</span></input>
+                        </label>
+                        <label>
+                            <input type="radio" name="occasion" value="date"><span>Date</span></input>
+                        </label>
+                        <label>
+                            <input type="radio" name="occasion" value="vacation"><span>Vacation</span></input>
+                        </label>
+                    </div>
+                </div>
+                <h4>Formality Level</h4>
+                <div class="options">
+                    <div class="options-left">
+                        <label>
+                            <input type="radio" name="formality" value="formal"><span>Formal</span></input>
+                        </label>
+                        <label>
+                            <input type="radio" name="formality" value="semi-formal"><span>Semi-formal</span></input>
+                        </label>
+                    </div>
+                    <div class="options-right">
+                        <label>
+                            <input type="radio" name="formality" value="casual"><span>Casual</span></input>
+                        </label>
+                        <label>
+                            <input type="radio" name="formality" value="laid-back"><span>Laid-Back</span></input>
+                        </label>
+                    </div>
+                </div>
+                <button type="submit">Style Me!</button>
+            </form>
+            <div class="fit-result" id="fit-result">
+                <div class="sidebar" id="sidebar">
+                    <h2>Outfits
+                        <img id="sparkle" src="../assets/brand/sparkle-circle.png">
+                        <p id="newfit">Find new outfit</p>
+                    </h2>
+                    <div class="sidebar-fit" id="sidebar-fit1">
+                        
+                    </div>
+                    <div class="sidebar-fit" id="sidebar-fit2">
+                        
+                    </div>
+                    <div class="sidebar-fit" id="sidebar-fit3">
+                        
+                    </div>
+                </div>
+                <div class="main-view">
+                    <div class="top-desc">
+                        <div class="move-top" id="moveT-fit1">
+                            
+                        </div>
+                        <div class="move-top" id="moveT-fit2">
+                        
+                        </div>
+                        <div class="move-top" id="moveT-fit3">
+                            
+                        </div>
+                        <svg id="arrowR" xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#fff">
+                            <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"
+                            stroke="#fff"
+                            stroke-width="60"/>
+                        </svg>
+                    </div>
+                    <div class="items-bar">
+                        <div class="move-bottom" id="moveB-fit1">
+                            
+                        </div>
+                        <div class="move-bottom" id="moveB-fit2">
+                            
+                        </div>
+                        <div class="move-bottom" id="moveB-fit3">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="weather-page" id="weather-page">
+            <p>Current weather in</p>
+            <h3>{{city}}</h3>
+            <h1>{{emoji}}</h1>
+            <h5>{{description}}</h5>
+            <h2>{{temp}}°F</h2>
+        </div>
+        <div class="aesthetic-page" id="aesthetic-page">
+            <div id="aesthetic1" class="aesthetic1">
+            </div>
+
+            <div id="aesthetic2" class="aesthetic2">
+            </div>
+        </div>
+    </div>
+    
+    <div id="outfit-div"></div>
+
+    <script>
+        const arrowR = document.getElementById("arrowR");
+        const sparkle = document.getElementById("sparkle");
+
+        let moveTFit1 = document.getElementById("moveT-fit1");
+        let moveBFit1 = document.getElementById("moveB-fit1");
+        let moveTFit2 = document.getElementById("moveT-fit2");
+        let moveBFit2 = document.getElementById("moveB-fit2");
+        let moveTFit3 = document.getElementById("moveT-fit3");
+        let moveBFit3 = document.getElementById("moveB-fit3");
+        moveTFit1.style.transform = "translateX(0)";
+        moveBFit1.style.transform = "translateX(0)";
+
+        let sideFit1 = document.getElementById("sidebar-fit1");
+        let sideFit2 = document.getElementById("sidebar-fit2");
+        let sideFit3 = document.getElementById("sidebar-fit3");
+        sideFit1.style.backgroundColor = "#5f7f4b36";
+
+        const weatherBtn = document.getElementById("weather-btn");
+        const outfitsBtn = document.getElementById("outfits-btn");
+        const aestheticBtn = document.getElementById("aesthetic-btn");
+
+        const weatherPage = document.getElementById("weather-page");
+        const outfitsPage = document.getElementById("outfits-page");
+        const aestheticPage = document.getElementById("aesthetic-page");
+
+        const goBtn = document.getElementById("go");
+        const profilePhoto = document.getElementById("profile-photo");
+
+        const profileNav = document.getElementById("profile-nav");
+        const preFitForm = document.getElementById("pre-fit-form");
+        const fitForm = document.getElementById("fit-form");
+        const aesthetic1 = document.getElementById("aesthetic1");
+        const aesthetic2 = document.getElementById("aesthetic2");
+
+        const aesDes = {{{aesDes}}};
+
+        sparkle.onclick = function(){
+            document.getElementById("fit-result").style.display = "none";
+            outfitsPage.style.width = "650px";
+            outfitsPage.style.height = "335px";
+            outfitsPage.style.borderRadius = "50px";
+            outfitsPage.style.backgroundColor = "var(--med-tan)";
+            preFitForm.style.display = "block";
+        }
+
+        function right1(){
+            moveTFit2.style.transition = "0.8s";
+            moveBFit2.style.transition = "0.8s";
+            moveTFit1.style.transform = "translateX(200%)";
+            moveBFit1.style.transform = "translateX(200%)";
+            moveTFit2.style.transform = "translateX(0)";
+            moveBFit2.style.transform = "translateX(0)";
+
+            moveTFit3.style.transition = "0s";
+            moveBFit3.style.transition = "0s";
+            moveTFit3.style.transform = "translateX(-200%)";
+            moveBFit3.style.transform = "translateX(-200%)";
+
+            sideFit1.style.backgroundColor = "";
+            sideFit2.style.backgroundColor = "#5f7f4b36";
+            sideFit3.style.backgroundColor = "";
+        }
+
+        function right2() {
+            moveTFit3.style.transition = "0.8s";
+            moveBFit3.style.transition = "0.8s";
+            moveTFit2.style.transform = "translateX(200%)";
+            moveBFit2.style.transform = "translateX(200%)";
+            moveTFit3.style.transform = "translateX(0)";
+            moveBFit3.style.transform = "translateX(0)";
+
+            moveTFit1.style.transition = "0s";
+            moveBFit1.style.transition = "0s";
+            moveTFit1.style.transform = "translateX(-200%)";
+            moveBFit1.style.transform = "translateX(-200%)";
+
+            sideFit1.style.backgroundColor = "";
+            sideFit2.style.backgroundColor = "";
+            sideFit3.style.backgroundColor = "#5f7f4b36";
+        }
+
+        function right3() {
+            moveTFit1.style.transition = "0.8s";
+            moveBFit1.style.transition = "0.8s";
+            moveTFit3.style.transform = "translateX(200%)";
+            moveBFit3.style.transform = "translateX(200%)";
+            moveTFit1.style.transform = "translateX(0)";
+            moveBFit1.style.transform = "translateX(0)";
+
+            moveTFit2.style.transition = "0s";
+            moveBFit2.style.transition = "0s";
+            moveTFit2.style.transform = "translateX(-200%)";
+            moveBFit2.style.transform = "translateX(-200%)";
+
+            sideFit3.style.backgroundColor = "";
+            sideFit2.style.backgroundColor = "";
+            sideFit1.style.backgroundColor = "#5f7f4b36";
+        }
+
+        arrowR.onclick = function(){
+            if (moveTFit1.style.transform == "translateX(0px)"){
+                right1();
+            }
+            else if (moveTFit2.style.transform == "translateX(0px)"){
+                right2();
+            }
+            else if (moveTFit3.style.transform == "translateX(0px)"){
+                right3();
+            }
+        }
+
+        sideFit1.onclick = function(){
+            right3();
+        }
+
+        sideFit2.onclick = function(){
+            right1();
+        }
+
+        sideFit3.onclick = function(){
+            right2();
+        }
+
+        if (Object.keys(aesDes).length > 1) {
+            aesthetic2.innerHTML = `
+                <div class="aes-wrapper2">
+                    <div class="aesthetic-container2">
+                        <div class="aes-text-container">
+                            <h3>${aesDes[0].aesthetic}</h3>
+                            <p>${aesDes[0].description}</p>
+                        </div>
+                        <div class="aes-emoji-container">
+                            <img src="../assets/aesthetics/${aesDes[0].img}.png">
+                        </div>
+                    </div>
+                    <h1>&</h1>
+                    <div class="aesthetic-container2">
+                        <div class="aes-text-container">
+                            <h3>${aesDes[1].aesthetic}</h3>
+                            <p>${aesDes[1].description}</p>
+                        </div>
+                        <div class="aes-emoji-container">
+                            <img src="../assets/aesthetics/${aesDes[1].img}.png">
+                        </div>
+                    </div>
+                </div>
+                `
+            aesthetic2.style.display = "block";
+        }
+        else {
+            aesthetic1.innerHTML = `
+                <div class="aesthetic-container1">
+                    <div class="aes-text-container">
+                        <h3>${aesDes[0].aesthetic}</h3>
+                        <p>${aesDes[0].description}</p>
+                    </div>
+                    <div class="aes-emoji-container">
+                        <img src="../assets/aesthetics/${aesDes[0].img}.png">
+                    </div>
+                </div>
+            `;
+            aesthetic1.style.display = "block";
+        }
+
+        profilePhoto.onclick = function(){
+            if (profileNav.style.display === "flex"){
+                profileNav.style.display = "none";
+            }
+            else{
+                profileNav.style.display = "flex";
+            }
+        }
+
+        weatherBtn.onclick = function(){
+            weatherBtn.style.backgroundColor = "var(--main-color)";
+            weatherPage.style.display = "flex";
+            outfitsBtn.style.backgroundColor = "var(--sub-color)";
+            outfitsPage.style.display = "none";
+            aestheticBtn.style.backgroundColor = "var(--sub-color)";
+            aestheticPage.style.display = "none";
+        }
+
+        outfitsBtn.onclick = function(){
+            weatherBtn.style.backgroundColor = "var(--sub-color)";
+            weatherPage.style.display = "none";
+            outfitsBtn.style.backgroundColor = "var(--main-color)";
+            outfitsPage.style.display = "flex";
+            aestheticBtn.style.backgroundColor = "var(--sub-color)";
+            aestheticPage.style.display = "none";
+        }
+
+        go.onclick = function() {
+            preFitForm.style.display = "none";
+            fitForm.style.display = "block";
+            outfitsPage.style.height = "510px";
+            outfitsPage.style.backgroundColor = "#FFFEFA";
+        }
+
+        aestheticBtn.onclick = function(){
+            weatherBtn.style.backgroundColor = "var(--sub-color)";
+            weatherPage.style.display = "none";
+            outfitsBtn.style.backgroundColor = "var(--sub-color)";
+            outfitsPage.style.display = "none";
+            aestheticBtn.style.backgroundColor = "var(--main-color)";
+            aestheticPage.style.display = "flex";
+        }
+
+        document.getElementById("fit-form").addEventListener("submit", async(e) => {
+            e.preventDefault();
+            const occasions = document.getElementsByName("occasion");
+            const formalities = document.getElementsByName("formality");
+            let occasion = ""
+            let formality = ""
+            const age = "{{age}}"
+            const temp = "{{temp}}"
+            const description = "{{description}}"
+
+            occasions.forEach(choice => {
+                if (choice.checked) {
+                    occasion = choice.value;
+                }
+            })
+            formalities.forEach(choice => {
+                if (choice.checked) {
+                    formality = choice.value;
+                }
+            })
+
+            try {
+                const response = await fetch("/closet", {
+                    method: "POST",
+                    headers: {
+                            "Content-Type": "application/json"
+                        },
+                    body: JSON.stringify({weather: `${description}, ${temp}°F`, age, occasion, formality})
+                })
+
+                if (response.ok) {
+                        const result = await response.json();
+
+                        if(result.success) {
+                            fitForm.style.display = "none";
+                            outfitsPage.style.width = "100%";
+                            outfitsPage.style.height = "100%";
+                            outfitsPage.style.borderRadius = "0";
+                            outfitsPage.style.backgroundColor = "#5f7f4b00";
+
+                            const fitResult = result.chatResponse;
+
+                            let imgHTML;
+                            let mainImgHML;
+                            let nameHTML;
+                            let itemsHTML;
+                            let num = 1;
+
+                            for (const key in fitResult) {
+                                itemsHTML = "";
+                                imgHTML = "";
+
+                                const outfitDes = fitResult[key];
+                                nameHTML = `${outfitDes.outfitName}`;
+                                
+                                for (const item of outfitDes.itemName) {
+                                    itemsHTML += `<li>${item}</li>`;
+                                }
+
+                                mainImgHML = `<img src="../assets/clothes/0${outfitDes.id[1]}.jpg">`;
+
+                                for (const imgId of outfitDes.id) {
+                                    imgHTML += `<li><img src="../assets/clothes/0${imgId}.jpg"></li>`
+                                }
+
+                                if (num == 1){
+                                    sideFit1.innerHTML = `
+                                        <p>${nameHTML}</p>
+                                        <div class="fit-box">
+                                            ${mainImgHML}
+                                        </div>`
+                                    moveTFit1.innerHTML = `
+                                        <div class="fit-box">
+                                            ${mainImgHML}
+                                        </div>
+                                        <div class="fit-text">
+                                            <h2>${nameHTML}</h2>
+                                            <ul>
+                                                ${itemsHTML}
+                                            </ul>
+                                        </div>`
+                                    moveBFit1.innerHTML = `
+                                        <h2>Items</h2>
+                                        <ul>
+                                            ${imgHTML}
+                                        </ul>`
+                                }
+                                else if (num == 2){
+                                    sideFit2.innerHTML = `
+                                        <p>${nameHTML}</p>
+                                        <div class="fit-box">
+                                            ${mainImgHML}
+                                        </div>`
+                                    moveTFit2.innerHTML = `
+                                        <div class="fit-box">
+                                            ${mainImgHML}
+                                        </div>
+                                        <div class="fit-text">
+                                            <h2>${nameHTML}</h2>
+                                            <ul>
+                                                ${itemsHTML}
+                                            </ul>
+                                        </div>`
+                                    moveBFit2.innerHTML = `
+                                        <h2>Items</h2>
+                                        <ul>
+                                            ${imgHTML}
+                                        </ul>`
+                                }
+                                else if (num == 3){
+                                    sideFit3.innerHTML = `
+                                        <p>${nameHTML}</p>
+                                        <div class="fit-box">
+                                            ${mainImgHML}
+                                        </div>`
+                                    moveTFit3.innerHTML = `
+                                        <div class="fit-box">
+                                            ${mainImgHML}
+                                        </div>
+                                        <div class="fit-text">
+                                            <h2>${nameHTML}</h2>
+                                            <ul>
+                                                ${itemsHTML}
+                                            </ul>
+                                        </div>`
+                                    moveBFit3.innerHTML = `
+                                        <h2>Items</h2>
+                                        <ul>
+                                            ${imgHTML}
+                                        </ul>`
+                                }
+                                num += 1;
+                            }
+                            document.getElementById("fit-result").style.display = "flex";
+                        }
+                        else {
+                            console.log("Error getting response: " + result)
+                        }
+                }
+                else {
+                        console.error("Error getting data")
+                    }
+                }
+            catch (error){
+                console.error("Fetch error:" + error)
+            }
+        })
+    </script>
+
+    <button>
+        <a href="/logout">Logout</a>
+    </button>
+</body>
+</html>

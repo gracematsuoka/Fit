@@ -1,0 +1,553 @@
+html, body {
+    height: 100%;
+}
+
+.container-y{
+    width: 962px;
+    height: 561px;
+    position: absolute;
+    z-index: -1;
+    transition: opacity 0.8s;
+}
+
+.form-container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container form {
+    width: 962px;
+    height: 561px;
+    background-color: var(--med-tan);
+    border-radius: 25px;
+    transition: background-color 0.8s ease, opacity 0.8s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+h4 span {
+    color: var(--main-color)
+}
+
+h4{
+    font-size: 40px;
+    position: absolute;
+    top: -50px;
+    left: 70px;
+}
+
+p{
+    font-size: 18px;
+}
+
+.basics-form{
+    transition: 0.8s;
+    position: absolute;
+}
+
+.basics-form h2{
+    position: absolute;
+    top: -60px;
+    left: -160px;
+    font-size: 32px;
+}
+
+.basics-form p span {
+    color: rgba(0, 0, 0, 0.54)
+}
+
+.basics-form input{
+    width: 406px;
+    height: 50px;
+    border-radius: 15px;
+    cursor: pointer;
+    border-width: 1px;
+    padding-left: 50px;
+    margin-top: 5px;
+    padding-right: 10px;
+    outline: none;
+    font-size: 16px;
+}
+
+.basics-form select{
+    width: 406px;
+    height: 50px;
+    border-radius: 15px;
+    cursor: pointer;
+    border-width: 1px;
+    padding-left: 50px;
+    margin-top: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+.input-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.input-container p{
+    position: absolute;
+    bottom: 55px;
+    left: 8px;
+}
+
+.basics-form label {
+    position: absolute;
+    left: 10px;
+    bottom: 8px;
+    fill: rgba(0, 0, 0, 0.7); 
+}
+
+.bottom-button {
+    width: 142px;
+    height: 47px;
+    color: white;
+    background-color: var(--main-color);
+    border-radius: 100px;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    align-self: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#next0 {
+    bottom: -100px
+}
+
+div form .aesthetic-form__title{
+    transition: 0.8s;
+    position: absolute;
+    transform: translateX(180%);
+    text-align: center;
+}
+
+.aesthetic-form__title p{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.aesthetic-form__title h2{
+    position: absolute;
+    top: -160px;
+    left: -60px;
+    font-size: 32px;
+}
+
+.aesthetic-form__title h3{
+    text-align: center;
+    font-size: 38px;
+}
+
+.aesthetic-form__title h3 span{
+    color: var(--main-color)
+}
+
+#quiz{
+    width: 263px;
+    position: absolute;
+    margin-top: 10px;
+}
+
+div form div #back0{
+    width: 121px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    margin-top: 140px;
+}
+
+.aesthetic-form__wrapper h2{
+    color: white;
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    font-size: 32px;
+}
+
+.aesthetic-form__wrapper p{
+    font-weight: bold;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.496);
+    position: absolute;
+    top: 40px;
+    left: 20px;
+}
+
+form .aesthetic-form__wrapper ul {
+    list-style: none;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+form .aesthetic-form__wrapper img {
+    width: 200px;
+    height: 300px;
+    border-radius: 15px;
+    border: 4px solid;
+    border-color: white;
+    transition: 0.8s ease;
+    cursor: pointer;
+}
+
+form div ul li img:hover {
+    transform: scale(0.95)
+}
+
+.aesthetic-form__wrapper input[type="radio"]{
+    opacity: 0;
+}
+
+.aesthetic-form__wrapper input[type="radio"]:checked + img{
+    transform: scale(0.95);
+}
+
+.aesthetic-form__wrapper input[type="radio"]:checked + img + .imageCheck{
+    visibility: visible;
+}
+
+div form .aesthetic-form__wrapper label {
+    position: relative;
+}
+
+.imageCheck {
+    position: absolute;
+    right: 10px;
+    top: -20px;
+    visibility: hidden;
+}
+
+form .aesthetic-form__wrapper{
+    transition: 1.5s ease;
+    will-change: transform, opacity;
+}
+
+.aesthetic-form__wrapper #next1 {
+    width: 142px;
+    height: 47px;
+    color: white;
+    background-color: var(--main-color);
+    border-radius: 100px;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 40px
+}
+
+.button-wrapper button {
+    width: 142px;
+    height: 47px;
+    color: white;
+    background-color: var(--main-color);
+    border-radius: 100px;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.button-wrapper {
+    gap: 10px;
+    position: absolute;
+    display: flex;
+    bottom: 40px
+}
+
+form div#destination {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(105%);
+}
+
+form div#animal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(105%);
+}
+
+#animal img {
+    width: 150px;
+    height: 225px;
+}
+
+form div#building {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(105%);
+}
+
+form div#car {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(105%);
+}
+
+#car img{
+    width: 155px;
+    height: 225px;
+}
+
+form div#food {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(105%);
+}
+
+form div#food ul{
+    flex-wrap: wrap;
+}
+
+#food img{
+    width: 200px;
+    height: 140px;
+}
+
+form div#hobby {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(105%);
+}
+
+form div#hobby ul{
+    flex-wrap: wrap;
+}
+
+#hobby img{
+    width: 200px;
+    height: 140px;
+}
+
+form div#palette {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(105%);
+}
+
+#palette img {
+    width: 105px;
+    height: 250px;
+}
+
+form div#palette ul{
+    flex-wrap: wrap;
+    gap: 3px
+}
+
+.progress-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: -110px;
+}
+
+.progress{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    display: none;
+}
+
+hr{
+    width: 40px;
+    height: 4px;
+    border: none;
+    background-color: #ECE8D6;
+    transition: linear 1s;
+}
+
+svg{
+    transition: 1s
+}
+
+.error{
+    text-align: center;
+    font-weight: bold;
+    color: var(--error);
+    background-color: rgba(210, 63, 63, 0.431);
+    border-radius: 15px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    display: inline-block;
+}
+
+#error2{
+    position: absolute;
+    bottom: 100px;
+    color: #BD2929;
+    background-color: #DF7777;
+}
+
+.aesthetic1{
+    transition: 1s ease;
+    transform: translateY(200%);
+}
+
+div .aesthetic-container1{
+    width: 920px;
+    height: 451px;
+    border-radius: 25px;
+    background-color: var(--med-tan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px
+}
+
+div div .closet-button{
+    width: 201px;
+    height: 47px;
+    background-color: var(--dark-tan);
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 50px;
+}
+
+div div h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+div div .closet-button a{
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+div .aesthetic1 div h3{
+    font-size: 40px;
+    text-align: right;
+}
+
+div div .aesthetic-container1 p{
+    width: 380px;
+    height: auto;
+    margin-top: 10px;
+    text-align: right;
+    font-size: 24px;
+}
+
+div div .aesthetic-container1 .aes-emoji-container{
+    width: 272px;
+    height: 311px;
+    border-radius: 50px;
+    background-color: var(--light-tan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div div .aesthetic-container1 .aes-emoji-container img{
+    width: 233px;
+    height: auto;
+}
+
+.aesthetic2{
+    transition: 1s ease;
+    transform: translateY(200%);
+}
+
+.aes-wrapper2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.aes-wrapper2 h1{
+    position: absolute;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+div .aesthetic-container2{
+    width: 611px;
+    height: 451px;
+    border-radius: 25px;
+    background-color: var(--med-tan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px
+}
+
+div .aesthetic2 div h3{
+    font-size: 40px;
+    text-align: right;
+}
+
+div div .aesthetic-container2 p{
+    width: 264px;
+    height: auto;
+    margin-top: 10px;
+    text-align: right;
+    font-size: 20px;
+}
+
+div div .aesthetic-container2 .aes-emoji-container{
+    width: 272px;
+    height: 311px;
+    border-radius: 50px;
+    background-color: var(--light-tan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div div .aesthetic-container2 .aes-emoji-container img{
+    width: 233px;
+    height: auto;
+}
+
+form div div button[type="submit"]{
+    width: 230px;
+    background-color: #4d683d
+}

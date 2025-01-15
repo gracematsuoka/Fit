@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/brand/fit-logo-circle.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="../assets/brand/fit-logo-circle.png">
+    </div>
+    <div class="form-container" id="formContainer">
+        <div class="container-y" id="containerY">
+            <h4 id="hi">Hi <span>{{name}}!</span></h4>    
+        </div>
+        <form id="infoForm">
+            <div class="basics-form" id="basics-form">
+                <h2>Let's get to know you...</h2>
+                <div class="input-container" id="input-container">
+                    <p>Birthday</p>
+                    <label for="birthday">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M160-80q-17 0-28.5-11.5T120-120v-200q0-33 23.5-56.5T200-400v-160q0-33 23.5-56.5T280-640h160v-58q-18-12-29-29t-11-41q0-15 6-29.5t18-26.5l56-56 56 56q12 12 18 26.5t6 29.5q0 24-11 41t-29 29v58h160q33 0 56.5 23.5T760-560v160q33 0 56.5 23.5T840-320v200q0 17-11.5 28.5T800-80H160Zm120-320h400v-160H280v160Zm-80 240h560v-160H200v160Zm80-240h400-400Zm-80 240h560-560Zm560-240H200h560Z"/></svg>
+                    </label>
+                    <input type="date" name="birthday" id="birthday">
+                </div>
+
+                <div class="input-container" id="input-container">
+                    <label for="gender">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M220-80v-300h-60v-220q0-33 23.5-56.5T240-680h120q33 0 56.5 23.5T440-600v220h-60v300H220Zm80-640q-33 0-56.5-23.5T220-800q0-33 23.5-56.5T300-880q33 0 56.5 23.5T380-800q0 33-23.5 56.5T300-720ZM600-80v-240H480l102-306q8-26 29.5-40t48.5-14q27 0 48.5 14t29.5 40l102 306H720v240H600Zm60-640q-33 0-56.5-23.5T580-800q0-33 23.5-56.5T660-880q33 0 56.5 23.5T740-800q0 33-23.5 56.5T660-720Z"/></svg>
+                    </label>    
+                    <p>Gender</p>
+                    <select name="gender" id="gender"> 
+                        <option value=""></option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>  
+                </div>
+
+                <div class="input-container" id="input-container">
+                    <label for="location">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-301q99-80 149.5-154T680-594q0-90-56-148t-144-58q-88 0-144 58t-56 148q0 65 50.5 139T480-301Zm0 101Q339-304 269.5-402T200-594q0-125 78-205.5T480-880q124 0 202 80.5T760-594q0 94-69.5 192T480-200Zm0-320q33 0 56.5-23.5T560-600q0-33-23.5-56.5T480-680q-33 0-56.5 23.5T400-600q0 33 23.5 56.5T480-520ZM200-80v-80h560v80H200Zm280-520Z"/></svg>
+                    </label>
+                    <p>City <span>(to account for the weather)</span></p>
+                    <input type="text" id="location" name="location">
+                </div>
+                
+                <button class="bottom-button" id="next0" type="button">Next</button>
+            </div>
+
+            <div class="aesthetic-form__title" id="aesthetic-form__title">
+                <h2>Next up...</h2>
+                <div class="error" id="error"></div>
+                <h3>Let's find your <span>Aesthetic</span></h3>
+                <p>so we can get a gist of your overall style <br> to give you more personalized outfit recommendations</p>
+                <button class="bottom-button" type="button" id="quiz">Take Aesthetics Quiz</button>
+                <button class="bottom-button" type="button" id="back0">Back</button>
+            </div>
+            
+            <div class="aesthetic-form__wrapper" id="destination">
+                <p>Aesthetics Quiz</p>
+                <h2>Choose a destination:</h2>
+                <ul>
+                    <li>
+                        <label for="city-street">
+                            <input type="radio" name="destination" id="city-street" value="city-street"></input>
+                            <img src="../assets/destination/city-street.jpg" alt="City Street"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="countryside">
+                            <input type="radio" name="destination" id="countryside" value="countryside"></input>
+                            <img src="../assets/destination/countryside.jpg" alt="Countryside"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="mountain">
+                            <input type="radio" name="destination" id="mountain" value="mountain"></input>
+                            <img src="../assets/destination/mountain.jpg" alt="Mountain"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="villa">
+                            <input type="radio" name="destination" id="villa" value="villa"></input>
+                            <img src="../assets/destination/villa.jpg" alt="Villa"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                </ul>
+                <button type="button" id="next1">Next</button>
+            </div>
+
+            <div class="aesthetic-form__wrapper" id="animal">
+                <p>Aesthetics Quiz</p>
+                <h2>Choose a pet:</h2>
+                <ul>
+                    <li>
+                        <label for="bird">
+                            <input type="radio" name="animal" id="bird" value="bird"></input>
+                            <img src="../assets/animal/bird.jpg" alt="Bird"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="black-cat">
+                            <input type="radio" name="animal" id="black-cat" value="black-cat"></input>
+                            <img src="../assets/animal/black-cat.jpg" alt="Black Cat"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="cat">
+                            <input type="radio" name="animal" id="cat" value="cat"></input>
+                            <img src="../assets/animal/cat.jpg" alt="Cat"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="dog">
+                            <input type="radio" name="animal" id="dog" value="dog"></input>
+                            <img src="../assets/animal/dog.jpg" alt="Dog"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="horse">
+                            <input type="radio" name="animal" id="horse" value="horse"></input>
+                            <img src="../assets/animal/horse.jpg" alt="Horse"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                </ul>
+                <div class="button-wrapper">
+                    <button type="button" id="back1">Back</button>
+                    <button type="button" id="next2">Next</button>
+                </div>
+            </div>
+
+            <div class="aesthetic-form__wrapper" id="building">
+                <p>Aesthetics Quiz</p>
+                <h2>Choose a building:</h2>
+                <ul>
+                    <li>
+                        <label for="cottage">
+                            <input type="radio" name="building" id="cottage" value="cottage"></input>
+                            <img src="../assets/building/cottage.jpg" alt="Cottage"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="goth-mansion">
+                            <input type="radio" name="building" id="goth-mansion" value="goth-mansion"></input>
+                            <img src="../assets/building/goth-mansion.jpg" alt="Goth Mansion"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="library">
+                            <input type="radio" name="building" id="library" value="library"></input>
+                            <img src="../assets/building/library.jpg" alt="Library"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="vinyl-shop">
+                            <input type="radio" name="building" id="vinyl-shop" value="vinyl-shop"></input>
+                            <img src="../assets/building/vinyl-shop.jpg" alt="Vinyl Shop"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                </ul>
+                <div class="button-wrapper">
+                    <button type="button" id="back2">Back</button>
+                    <button type="button" id="next3">Next</button>
+                </div>
+            </div>
+
+            <div class="aesthetic-form__wrapper" id="car">
+                <p>Aesthetics Quiz</p>
+                <h2>Choose a car:</h2>
+                <ul>
+                    <li>
+                        <label for="beach-van">
+                            <input type="radio" name="car" id="beach-van" value="beach-van"></input>
+                            <img src="../assets/car/beach-van.jpg" alt="Beach Van">
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="jeep">
+                            <input type="radio" name="car" id="jeep" value="jeep"></input>
+                            <img src="../assets/car/jeep.jpg" alt="Jeep"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="sports-car">
+                            <input type="radio" name="car" id="sports-car" value="sports-car"></input>
+                            <img src="../assets/car/sports-car.jpg" alt="Sports Car"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="tesla">
+                            <input type="radio" name="car" id="tesla" value="tesla"></input>
+                            <img src="../assets/car/tesla.jpg" alt="Tesla"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="corvette">
+                            <input type="radio" name="car" id="corvette" value="corvette"></input>
+                            <img src="../assets/car/corvette.jpg" alt="Corvette"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                </ul>
+                <div class="button-wrapper">
+                    <button type="button" id="back3">Back</button>
+                    <button type="button" id="next4">Next</button>
+                </div>
+            </div>
+
+            <div class="aesthetic-form__wrapper" id="food">
+                <p>Aesthetics Quiz</p>
+                <h2>Choose a food:</h2>
+                <ul>
+                    <li>
+                        <label for="acai">
+                            <input type="radio" name="food" id="acai" value="acai"></input>
+                            <img src="../assets/food/acai.jpg" alt="Acai"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="bakery">
+                            <input type="radio" name="food" id="bakery" value="bakery"></input>
+                            <img src="../assets/food/bakery.jpg" alt="Bakery"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="farmers-market">
+                            <input type="radio" name="food" id="farmers-market" value="farmers-market"></input>
+                            <img src="../assets/food/farmers-market.jpg" alt="Farmer's Market"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="fine">
+                            <input type="radio" name="food" id="fine" value="fine"></input>
+                            <img src="../assets/food/fine-dining.jpg" alt="Fine Dining"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ramen">
+                            <input type="radio" name="food" id="ramen" value="ramen"></input>
+                            <img src="../assets/food/instant-ramen.jpg" alt="Instant Ramen"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="pancakes">
+                            <input type="radio" name="food" id="pancakes" value="pancakes"></input>
+                            <img src="../assets/food/pancake.jpg" alt="Pancakes"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="sweets">
+                            <input type="radio" name="food" id="sweets" value="sweets"></input>
+                            <img src="../assets/food/pink-dessert.jpg" alt="Pink Dessert"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                </ul>
+                <div class="button-wrapper">
+                    <button type="button" id="back4">Back</button>
+                    <button type="button" id="next5">Next</button>
+                </div>
+            </div>
+
+            <div class="aesthetic-form__wrapper" id="hobby">
+                <p>Aesthetics Quiz</p>
+                <h2>Choose a hobby:</h2>
+                <ul>
+                    <li>
+                        <label for="guitar">
+                            <input type="radio" name="hobby" id="guitar" value="guitar"></input>
+                            <img src="../assets/hobbies/guitar.jpg" alt="Guitar"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="hiking">
+                            <input type="radio" name="hobby" id="hiking" value="hiking"></input>
+                            <img src="../assets/hobbies/hiking.jpg" alt="Hiking"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="knitting">
+                            <input type="radio" name="hobby" id="knitting" value="knitting"></input>
+                            <img src="../assets/hobbies/knitting.jpg" alt="Knitting"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="music">
+                            <input type="radio" name="hobby" id="music" value="music"></input>
+                            <img src="../assets/hobbies/music.jpg" alt="Music"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="painting">
+                            <input type="radio" name="hobby" id="painting" value="painting"></input>
+                            <img src="../assets/hobbies/painting.jpg" alt="Painting"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="reading">
+                            <input type="radio" name="hobby" id="reading" value="reading"></input>
+                            <img src="../assets/hobbies/reading.jpg" alt="Reading"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                </ul>
+                <div class="button-wrapper">
+                    <button type="button" id="back5">Back</button>
+                    <button type="button" id="next6">Next</button>
+                </div>
+            </div>
+
+            <div class="aesthetic-form__wrapper" id="palette">
+                <p>Aesthetics Quiz</p>
+                <h2>Choose a color palette:</h2>
+                <ul>
+                    <li>
+                        <label for="basic">
+                            <input type="radio" name="palette" id="basic" value="basic"></input>
+                            <img src="../assets/palette/basic.png" alt="Basic"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="beach">
+                            <input type="radio" name="palette" id="beach" value="beach"></input>
+                            <img src="../assets/palette/beach.png" alt="Beach"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="coquette">
+                            <input type="radio" name="palette" id="coquette" value="coquette"></input>
+                            <img src="../assets/palette/coquette.png" alt="Coquette"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="dark">
+                            <input type="radio" name="palette" id="dark" value="dark"></input>
+                            <img src="../assets/palette/dark.png" alt="Dark"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="indie">
+                            <input type="radio" name="palette" id="indie" value="indie"></input>
+                            <img src="../assets/palette/indie.png" alt="Indie"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="old-money">
+                            <input type="radio" name="palette" id="old-money" value="old-money"></input>
+                            <img src="../assets/palette/old-money.png" alt="Old-Money"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="vintage">
+                            <input type="radio" name="palette" id="vintage" value="vintage"></input>
+                            <img src="../assets/palette/vintage.png" alt="Vintage"/>
+                            <svg class="imageCheck" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                        </label>
+                    </li>
+                </ul>
+                <div class="error" id="error2"></div>
+                <div class="button-wrapper">
+                    <button type="button" id="back6">Back</button>
+                    <button type="submit">Find my aesthetic!</button>
+                </div>
+            </div>
+        </form>
+        <div class="container-y" id="containerY">
+            <div class="progress-wrapper">
+                <div class="progress" id="progress">
+                    <svg id="step1" xmlns="http://www.w3.org/2000/svg" height="45px" viewBox="0 -960 960 960" width="45px" fill="#ECE8D6"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                    <hr id="line1">
+                    <svg id="step2" xmlns="http://www.w3.org/2000/svg" height="45px" viewBox="0 -960 960 960" width="45px" fill="#ECE8D6"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                    <hr id="line2">
+                    <svg id="step3" xmlns="http://www.w3.org/2000/svg" height="45px" viewBox="0 -960 960 960" width="45px" fill="#ECE8D6"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                    <hr id="line3">
+                    <svg id="step4" xmlns="http://www.w3.org/2000/svg" height="45px" viewBox="0 -960 960 960" width="45px" fill="#ECE8D6"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                    <hr id="line4">
+                    <svg id="step5" xmlns="http://www.w3.org/2000/svg" height="45px" viewBox="0 -960 960 960" width="45px" fill="#ECE8D6"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                    <hr id="line5">
+                    <svg id="step6" xmlns="http://www.w3.org/2000/svg" height="45px" viewBox="0 -960 960 960" width="45px" fill="#ECE8D6"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                    <hr id="line6">
+                    <svg id="step7" xmlns="http://www.w3.org/2000/svg" height="45px" viewBox="0 -960 960 960" width="45px" fill="#ECE8D6"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                </div>
+            </div>
+        </div>
+
+        <div id="aesthetic1" class="aesthetic1">
+        </div>
+
+        <div id="aesthetic2" class="aesthetic2">
+        </div>
+    </div>
+
+    <script>
+        let city;
+        let birthday;
+        let gender;
+
+        document.getElementById("infoForm").addEventListener("submit", async(e) => {
+            e.preventDefault();
+            const destinations = document.getElementsByName("destination");
+            const animals = document.getElementsByName("animal");
+            const buildings = document.getElementsByName("building");
+            const cars = document.getElementsByName("car");
+            const hobbies = document.getElementsByName("hobby");
+            const palettes = document.getElementsByName("palette");
+            const foods = document.getElementsByName("food");
+            city = document.getElementById("location").value;
+            birthday = document.getElementById("birthday").value;
+            gender = document.getElementById("gender").value;
+            let destination = ""
+            let animal = ""
+            let building = ""
+            let car = ""
+            let hobby = ""
+            let food = ""
+            let palette = ""
+
+            destinations.forEach(choice => {
+                if (choice.checked) {
+                    destination = choice.value;
+                }
+            });
+            animals.forEach(choice => {
+                if (choice.checked) {
+                    animal = choice.value;
+                }
+            });
+            buildings.forEach(choice => {
+                if (choice.checked) {
+                    building = choice.value;
+                }
+            });
+            cars.forEach(choice => {
+                if (choice.checked) {
+                    car = choice.value;
+                }
+            });
+            hobbies.forEach(choice => {
+                if (choice.checked) {
+                    hobby = choice.value;
+                }
+            });
+            palettes.forEach(choice => {
+                if (choice.checked) {
+                    palette = choice.value;
+                }
+            });
+            foods.forEach(choice => {
+                if (choice.checked) {
+                    food = choice.value;
+                }
+            });
+
+            if (!destination || !building || !car || !food || !animal || !hobby || !palette) {
+                console.log("ello")
+                document.getElementById("error2").innerHTML = "Please make sure you've answered all questions."
+                document.getElementById("error2").style.padding = "5px";
+                return;
+            }
+
+            try {
+                const response = await fetch("/protected-info", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({birthday, city, gender, destination, building, animal, food, car, hobby, palette})
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    const aesthetic1 = document.getElementById("aesthetic1");
+                    const aesthetic2 = document.getElementById("aesthetic2");
+                    const infoForm = document.getElementById("infoForm");
+                    const containerY = document.getElementById("containerY");
+                    const progress = document.getElementById("progress");
+
+                    if(result.success) {
+                        if (result.multiple) {
+                            aesthetic2.innerHTML = `
+                            <h2>Your aesthetic best matches...</h2>
+                            <div class="aes-wrapper2">
+                                <div class="aesthetic-container2">
+                                    <div class="aes-text-container">
+                                        <h3>${result.aesDes[0].aesthetic}</h3>
+                                        <p>${result.aesDes[0].description}</p>
+                                    </div>
+                                    <div class="aes-emoji-container">
+                                        <img src="../assets/aesthetics/${result.aesDes[0].img}.png">
+                                    </div>
+                                </div>
+                                <h1>&</h1>
+                                <div class="aesthetic-container2">
+                                    <div class="aes-text-container">
+                                        <h3>${result.aesDes[1].aesthetic}</h3>
+                                        <p>${result.aesDes[1].description}</p>
+                                    </div>
+                                    <div class="aes-emoji-container">
+                                        <img src="../assets/aesthetics/${result.aesDes[1].img}.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="closet-button">
+                                <a href="/closet">Go to My Closet</a>
+                            </button>
+                            `;
+                            infoForm.style.opacity = "0";
+                            containerY.style.opacity = "0";
+                            infoForm.style.display = "none";
+                            containerY.style.display = "none";
+                            progress.style.display = "none";
+                            aesthetic2.style.transform = "translateY(0)";
+                        }
+                        else {
+                            aesthetic1.innerHTML = `
+                            <h2>Your aesthetic best matches...</h2>
+                            <div class="aesthetic-container1">
+                                <div class="aes-text-container">
+                                    <h3>${result.aesDes[0].aesthetic}</h3>
+                                    <p>${result.aesDes[0].description}</p>
+                                </div>
+                                <div class="aes-emoji-container">
+                                    <img src="../assets/aesthetics/${result.aesDes[0].img}.png">
+                                </div>
+                            </div>
+                            <button class="closet-button">
+                                <a href="/closet">Go to My Closet</a>
+                            </button>
+                        `;
+                        infoForm.style.opacity = "0";
+                        containerY.style.opacity = "0";
+                        infoForm.style.display = "none";
+                        containerY.style.display = "none";
+                        progress.style.display = "none";
+                        aesthetic1.style.transform = "translateY(0)";
+                        }
+                    }
+                    else {
+                        console.error("Error in response: " + result)
+                    }
+                }
+                else {
+                    console.error("Error fetching aesthetics data")
+                }
+            }
+            catch (error) {
+                console.error("Fetch error:" + error)
+            }
+        });
+
+        const basics = document.getElementById("basics-form")
+        const aesTitle = document.getElementById("aesthetic-form__title")
+        const hi = document.getElementById("hi")
+        const container = document.getElementById("infoForm");
+        const progress = document.getElementById("progress");
+        const containerY = document.getElementById("containerY");
+        const quizBtn = document.getElementById("quiz")
+        const errorDiv = document.getElementById("error")
+
+        const destination = document.getElementById("destination");
+        const animal = document.getElementById("animal");
+        const building = document.getElementById("building");
+        const car = document.getElementById("car");
+        const food = document.getElementById("food");
+        const hobby = document.getElementById("hobby");
+        const palette = document.getElementById("palette");
+
+        const back0 = document.getElementById("back0");
+        const back1 = document.getElementById("back1");
+        const back2 = document.getElementById("back2");
+        const back3 = document.getElementById("back3");
+        const back4 = document.getElementById("back4");
+        const back5 = document.getElementById("back5");
+        const back6 = document.getElementById("back6");
+
+        const next0 = document.getElementById("next0");
+        const next1 = document.getElementById("next1");
+        const next2 = document.getElementById("next2");
+        const next3 = document.getElementById("next3");
+        const next4 = document.getElementById("next4");
+        const next5 = document.getElementById("next5");
+        const next6 = document.getElementById("next6");
+
+        const step1 = document.getElementById("step1");
+        const step2 = document.getElementById("step2");
+        const step3 = document.getElementById("step3");
+        const step4 = document.getElementById("step4");
+        const step5 = document.getElementById("step5");
+        const step6 = document.getElementById("step6");
+        const step7 = document.getElementById("step7");
+
+        const line1 = document.getElementById("line1");
+        const line2 = document.getElementById("line2");
+        const line3 = document.getElementById("line3");
+        const line4 = document.getElementById("line4");
+        const line5 = document.getElementById("line5");
+        const line6 = document.getElementById("line6");
+
+        const destinations = document.getElementsByName("destination");
+        const animals = document.getElementsByName("animal");
+        const buildings = document.getElementsByName("building");
+        const cars = document.getElementsByName("car");
+        const hobbies = document.getElementsByName("hobby");
+        const palettes = document.getElementsByName("palette");
+        const foods = document.getElementsByName("food");
+
+        next0.onclick = function(){
+            basics.style.transform = "translateX(-180%)"
+            aesTitle.style.transform = "none";
+        }
+
+        back0.onclick = function(){
+            basics.style.transform = "none";
+            aesTitle.style.transform = "translateX(180%)";
+        }
+
+        quizBtn.onclick = function() {
+            city = document.getElementById("location").value;
+            birthday = document.getElementById("birthday").value;
+            gender = document.getElementById("gender").value;
+            console.log(city, birthday, gender)
+            if (!city || !birthday || !gender) {
+                errorDiv.innerHTML = "Please answer all questions before continuing";
+                errorDiv.style.padding = "5px"
+                return;
+            }
+            else {
+                container.style.backgroundColor = "#809E6D";
+                container.style.transform = "scale(1.2)";
+                containerY.style.transform = "scale(1.2)";
+                hi.style.display = "none";
+                aesTitle.style.transform = "translateX(-180%)";
+                destination.style.transform = "none";
+                progress.style.display = "flex";
+            }
+        }
+
+        next1.onclick = function(){
+            destination.style.transform = "translateX(-105%)";
+            animal.style.transform = "none";
+        }
+
+        back1.onclick = function(){
+            destination.style.transform = "none";
+            animal.style.transform = "translateX(105%)"
+        }
+
+        next2.onclick = function(){
+            animal.style.transform = "translateX(-105%)";
+            building.style.transform = "none";
+        }
+
+        back2.onclick = function(){
+            animal.style.transform = "none";
+            building.style.transform = "translateX(105%)"
+        }
+
+        next3.onclick = function(){
+            building.style.transform = "translateX(-105%)";
+            car.style.transform = "none";
+        }
+
+        back3.onclick = function(){
+            building.style.transform = "none";
+            car.style.transform = "translateX(105%)"
+        }
+
+        next4.onclick = function(){
+            car.style.transform = "translateX(-105%)";
+            food.style.transform = "none";
+        }
+
+        back4.onclick = function(){
+            car.style.transform = "none";
+            food.style.transform = "translateX(105%)"
+        }
+
+        next5.onclick = function(){
+            food.style.transform = "translateX(-105%)";
+            hobby.style.transform = "none";
+        }
+
+        back5.onclick = function(){
+            food.style.transform = "none";
+            hobby.style.transform = "translateX(105%)"
+        }
+
+        next6.onclick = function(){
+            hobby.style.transform = "translateX(-105%)";
+            palette.style.transform = "none";
+        }
+
+        back6.onclick = function(){
+            hobby.style.transform = "none";
+            palette.style.transform = "translateX(105%)"
+        }
+
+        destinations.forEach(choice => {
+            choice.addEventListener("change", function() {
+                if (this.checked) {
+                    step1.innerHTML = '<path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/>'
+                    step1.setAttribute("fill", "#5F7F4B");
+                    line1.style.backgroundColor = "#5F7F4B";
+                }
+            })
+        });
+
+        animals.forEach(choice => {
+            choice.addEventListener("change", function() {
+                if (this.checked) {
+                    step2.innerHTML = '<path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/>'
+                    step2.setAttribute("fill", "#5F7F4B");
+                    line2.style.backgroundColor = "#5F7F4B";
+                }
+            })
+        });
+
+        buildings.forEach(choice => {
+            choice.addEventListener("change", function() {
+                if (this.checked) {
+                    step3.innerHTML = '<path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/>'
+                    step3.setAttribute("fill", "#5F7F4B");
+                    line3.style.backgroundColor = "#5F7F4B";
+                }
+            })
+        });
+
+        cars.forEach(choice => {
+            choice.addEventListener("change", function() {
+                if (this.checked) {
+                    step4.innerHTML = '<path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/>'
+                    step4.setAttribute("fill", "#5F7F4B");
+                    line4.style.backgroundColor = "#5F7F4B";
+                }
+            })
+        });
+
+        foods.forEach(choice => {
+            choice.addEventListener("change", function() {
+                if (this.checked) {
+                    step5.innerHTML = '<path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/>'
+                    step5.setAttribute("fill", "#5F7F4B");
+                    line5.style.backgroundColor = "#5F7F4B";
+                }
+            })
+        });
+
+        hobbies.forEach(choice => {
+            choice.addEventListener("change", function() {
+                if (this.checked) {
+                    step6.innerHTML = '<path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/>'
+                    step6.setAttribute("fill", "#5F7F4B");
+                    line6.style.backgroundColor = "#5F7F4B";
+                }
+            })
+        });
+
+        palettes.forEach(choice => {
+            choice.addEventListener("change", function() {
+                if (this.checked) {
+                    step7.innerHTML = '<path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/>'
+                    step7.setAttribute("fill", "#5F7F4B");
+                }
+            })
+        });
+    </script>
+    
+</body>
+</html>
