@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const hbs = require("hbs");
-const passport = require("../passport");
+const passport = require("./passport");
 const session = require("express-session");
 const User = require("./mongodb");
 const { MongoClient } = require("mongodb");
