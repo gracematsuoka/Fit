@@ -24,7 +24,7 @@ app.set("view engine", "hbs");
 app.set("views", templatePath); //automatically goes to folder "views" but we're changing it to go to templates
 app.use(express.urlencoded({extended:false})); // parses form data
 app.use("/assets", express.static(path.join(__dirname, "../src/assets")));
-app.use(express.static(__dirname));
+app.use(express.static(__dirname, "src"));
 
 console.log("dir:" + templatePath)
 
