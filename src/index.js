@@ -13,7 +13,10 @@ const fs = require("fs");
 
 dotenv.config();
 const app = express();
-app.use(session({secret: "cats"}));
+app.use(session({secret: "cats",
+                resave: false,
+                saveUninitialized: true
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -23,10 +26,8 @@ app.use(express.json());
 app.set("view engine", "hbs");
 app.set("views", templatePath); //automatically goes to folder "views" but we're changing it to go to templates
 app.use(express.urlencoded({extended:false})); // parses form data
-app.use("/assets", express.static(path.join(__dirname, "../src/assets")));
-app.use(express.static(__dirname, "src"));
-
-console.log("dir:" + templatePath)
+// app.use("/assets", express.static(path.join(__dirname, "../src/assets")));
+app.use(express.static(path.join(__dirname)));
 
 // code to reload automatically:
 const livereload = require("livereload");
