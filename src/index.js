@@ -17,21 +17,23 @@ app.use(session({secret: "cats"}));
 app.use(passport.initialize());
 app.use(passport.session());
 
-const templatePath = path.join(__dirname, '../outfit_finder/hbs');
+const templatePath = path.join(__dirname, '../src/hbs');
 
 app.use(express.json());
 app.set("view engine", "hbs");
 app.set("views", templatePath); //automatically goes to folder "views" but we're changing it to go to templates
 app.use(express.urlencoded({extended:false})); // parses form data
-app.use("/assets", express.static("assets"));
+app.use("/assets", express.static(path.join(__dirname, "../src/assets")));
 app.use(express.static(__dirname));
+
+console.log("dir:" + templatePath)
 
 // code to reload automatically:
 const livereload = require("livereload");
 const connectLivereload = require("connect-livereload");
 
 const liveReloadServer = livereload.createServer();
-liveReloadServer.watch(__dirname + "/hbs"); 
+liveReloadServer.watch(__dirname + "/src/hbs"); 
 
 app.use(connectLivereload());
 
