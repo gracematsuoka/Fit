@@ -43,7 +43,6 @@ liveReloadServer.server.once("connection", () => {
         liveReloadServer.refresh("/");
     }, 100);
 });
-// 
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
@@ -57,6 +56,8 @@ function isLoggedIn(req, res, next) {
 app.get("/", (req, res) => {
     res.render("main");
 });
+
+module.exports = app;
 
 // test endpoint
 app.get("/info", (req, res) => {
@@ -665,9 +666,6 @@ app.get("/logout", (req, res, next) => {
     res.redirect("/")
     })
 });
-
-
-module.exports = app;
 
 app.listen(3000, () => {
     console.log("port connected");
