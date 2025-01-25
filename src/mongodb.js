@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
+const mongoURI = process.env.MONGO_URI;
 
 // connect node to mongodb database
-mongoose.connect("mongodb://localhost:27017/outfit_finder")
+mongoose.connect(mongoURI)
 .then(()=>{
     console.log("mongodb connected");
 })
