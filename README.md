@@ -12,9 +12,9 @@
 
 <p align="center">
   <a href="#about">About</a> •
-  <a href="#key-features">Key Features</a> •
+  <a href="#🔑-key-features">Key Features</a> •
   <a href="#usage">Usage</a> •
-  <a href="#additions">Additions</a> •
+  <a href="#additions">Additions</a>
 </p>
 
 <h1 align="center">
