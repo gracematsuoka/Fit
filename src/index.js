@@ -30,19 +30,19 @@ app.use(express.urlencoded({extended:false})); // parses form data
 app.use(express.static(path.join(__dirname)));
 
 // code to reload automatically:
-const livereload = require("livereload");
-const connectLivereload = require("connect-livereload");
+// const livereload = require("livereload");
+// const connectLivereload = require("connect-livereload");
 
-const liveReloadServer = livereload.createServer();
-liveReloadServer.watch(__dirname + "/src/hbs"); 
+// const liveReloadServer = livereload.createServer();
+// liveReloadServer.watch(__dirname + "/src/hbs"); 
 
-app.use(connectLivereload());
+// app.use(connectLivereload());
 
-liveReloadServer.server.once("connection", () => {
-    setTimeout(() => {
-        liveReloadServer.refresh("/");
-    }, 100);
-});
+// liveReloadServer.server.once("connection", () => {
+//     setTimeout(() => {
+//         liveReloadServer.refresh("/");
+//     }, 100);
+// });
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
@@ -667,6 +667,6 @@ app.get("/logout", (req, res, next) => {
     })
 });
 
-app.listen(3000, () => {
-    console.log("port connected");
+app.listen(3000, '0.0.0.0', () => {
+    console.log("port 3000 connected");
 });
