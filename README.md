@@ -11,10 +11,10 @@
 </h4>
 
 <p align="center">
-  <a href="#about">About</a> •
+  <a href="#-about-the-project">About</a> •
   <a href="#-key-features">Key Features</a> •
-  <a href="#usage">Usage</a> •
-  <a href="#additions">Additions</a>
+  <a href="#-usage">Usage</a> •
+  <a href="#-additions">Additions</a>
 </p>
 
 <h1 align="center">
@@ -43,67 +43,69 @@ The web application is designed with a user-friendly UI and seamless user intera
 
 ## 🔑 Key Features
 
-<h4>User Authentication 👩‍💻</h4>
+* <h4>User Authentication 👩‍💻</h4>
 <p>
 Users have the choice of creating an account through Google or by manually entering an email and password. 
 </p>
-<div style="display: flex; gap: 20px">
+<details>
+<summary style="font-size: 15px">Click to view screenshots</summary>
 <img src="https://github.com/matsuokagl/Fit/blob/main/src/assets/brand/screenshots/createaccount.png?raw=true">
 <img src="https://github.com/matsuokagl/Fit/blob/main/src/assets/brand/screenshots/login.png?raw=true">
-</div>
+</details>
 
-<h4>Form Input 📋</h4>
+* <h4>Form Input 📋</h4>
 <p>
 Once a user creates an account, they're redirected to a quick questionnaire about their basic information such as their birthday, gender, and location to get better insight into how to style them. This information is stored in the User database model. All questions must be answered before proceeding (handles errors).
 </p>
-<div style="display: flex; gap: 20px">
+<details>
+<summary style="font-size: 15px">Click to view screenshots</summary>
 <img src="https://github.com/matsuokagl/Fit/blob/main/src/assets/brand/screenshots/form.png?raw=true">
 <img src="https://github.com/matsuokagl/Fit/blob/main/src/assets/brand/screenshots/errorquiz.png?raw=true">
-</div>
+</details>
 
-<h4>Precise Algorithmic Results 📌</h4>
+* <h4>Precise Algorithmic Results 📌</h4>
 <p>
 To find a user's style/aesthetic, a simple seven-question "quiz" is given. Each question asks the user to pick an image out of the various options. Each photo the user picks has an associated number of points attached to it from 0-5 for each of the 16 aesthetics. For instance, choosing a black cat as a pet would add five points to "goth" and zero points to "athletic." 
 </p>
-<div style="display: flex; gap: 20px">
+<details>
+<summary style="font-size: 15px">Click to view screenshots</summary>
 <img src="https://github.com/matsuokagl/Fit/blob/main/src/assets/brand/screenshots/quiz1.png?raw=true">
 <img src="https://github.com/matsuokagl/Fit/blob/main/src/assets/brand/screenshots/quiz2.png?raw=true">
-</div>
 <br>
 <p>
 The algorithm is thoroughly designed to provide users with accurate results of their aesthetic(s). The final result, either one or two aesthetics, is shown to the user with a brief description of how it relates to their clothing choices. 
 </p>
-<div style="display: flex; gap: 20px">
 <img src="https://github.com/matsuokagl/Fit/blob/main/src/assets/brand/screenshots/result1.png?raw=true">
 <img src="https://github.com/matsuokagl/Fit/blob/main/src/assets/brand/screenshots/results2.png?raw=true">
-</div>
+</details>
 
-<h4>Seamless API & Backend Connection ⚙️</h4>
+* <h4>Seamless API & Backend Connection ⚙️</h4>
 <p>
 The user's input to the questionnaire gets sent to the backend to be used for the "closet."
 </p>
-<div style="display: flex; gap: 20px">
+<details>
+<summary style="font-size: 15px">Click to view screenshots</summary>
 <img src="https://github.com/matsuokagl/Fit/blob/main/src/assets/brand/screenshots/closet-temp.png?raw=true">
-</div>
 <br>
-<div style="display: flex; gap: 20px">
 <img src="https://github.com/matsuokagl/Fit/blob/main/src/assets/brand/screenshots/casual-school.png?raw=true">
 <img src="https://github.com/matsuokagl/Fit/blob/main/src/assets/brand/screenshots/school1.png?raw=true">
 <img src="https://github.com/matsuokagl/Fit/blob/main/src/assets/brand/screenshots/school2.png?raw=true">
 <img src="https://github.com/matsuokagl/Fit/blob/main/src/assets/brand/screenshots/school3.png?raw=true">
-</div>
 <p style="font-size: 15px">* Users can scroll through three different outfit ideas or generate new ones by clicking on the ✨ icon.</p>
+</details>
 
-<h4>Modern and Clean UI  🎨</h4>
+* <h4>Modern and Clean UI  🎨</h4>
 <p>
 The web application was designed using Figma and presents a modern and clean interface with a user-friendly UI. 
 </p>
-<div style="display: flex; gap: 20px">
+<details>
+<summary style="font-size: 15px">Click to view screenshots</summary>
 <img src="https://github.com/matsuokagl/Fit/blob/main/src/assets/brand/screenshots/closet-outfit.png?raw=true">
 <img src="https://github.com/matsuokagl/Fit/blob/main/src/assets/brand/screenshots/closet-aesthetic.png?raw=true">
 <img src="https://github.com/matsuokagl/Fit/blob/main/src/assets/brand/screenshots/logout.png?raw=true">
 </div>
 <p style="font-size: 15px">* A user is automatically logged in for up to seven days until they have to reauthenticate but of course, there's always a choice to log out</p>
+</details>
 
 ## 🔓 Usage
 
