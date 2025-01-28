@@ -1,6 +1,8 @@
 <h1 align="center">
   <br>
-  <img src="https://github.com/matsuokagl/Fit/blob/main/src/assets/brand/fit-logo-circle.png?raw=true" alt="Fit" width="150">
+  <a href="https://fit-gracematsuoka.com/">
+    <img src="https://github.com/matsuokagl/Fit/blob/main/src/assets/brand/fit-logo-circle.png?raw=true" alt="Fit" width="150">
+  </a>
   <br>
   Fit
   <br>
@@ -31,7 +33,7 @@ The web application is designed with a user-friendly UI and seamless user intera
 
 ### Built With
 
-[![My Skills](https://skillicons.dev/icons?i=js,html,css,nodejs,expressjs,mongo, googlecloud,figma)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=js,html,css,nodejs,expressjs,mongo, googlecloud,aws,figma)](https://skillicons.dev)
 
 * Javascript
 * HTML
@@ -40,6 +42,7 @@ The web application is designed with a user-friendly UI and seamless user intera
 * Express.js
 * MongoDB
 * Google Cloud
+* AWS
 * Figma
 
 ## 🔑 Key Features
@@ -109,6 +112,8 @@ The web application was designed using Figma and presents a modern and clean int
 </details>
 
 ## 🔓 Usage
+
+To get started with Fit, you can head straight to the hosted website at https://fit-gracematsuoka.com/. Fit is deployed using AWS EC2 📦.
 
 ## 💻 Additions 
 
