@@ -119,7 +119,7 @@ This web application is an ongoing project with additional features and improvem
 - **Advanced weather support:** Because the free tier of OpenWeather is used, only US-based cities are supported and only the current weather (not upcoming) can be seen. Advancing to a higher tier would allow for greater user support
 	- Additionally, integrating AI to give outfit/styling advice based on the upcoming weather such as "bring an umbrella" if it will rain or "wear sunscreen" if the UV is high
 - **Greater outfit variations:** This application uses GPT-4o mini for cost efficiency but one limitation is that the model can only accurately read through a database with a couple hundred entries or less, thus limiting the application’s ability to provide a vast selection of outfit ideas. Changing to a more advanced model would expand the application's styling accuracy
-- **Mobile app version:** Give accessibility on mobile devices
+- **Mobile app version:** Expand accessibility to mobile devices. Right now the application is only supported by the web browser and has to be used on a laptop, iPad or other device that has a horizontally oriented screen. The CSS and HTML formatting still need to be adjusted to support vertical orientations. Additionally, creating a mobile app version of the website would allow for even greater access.
 - **User Flexibility:** Allow users to take more charge of their account by adding more information about their outfit preferences (such as color, types of clothes, etc.), allowing outfits to be saved, and editing profile information
 
 
