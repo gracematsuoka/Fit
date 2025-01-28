@@ -33,7 +33,7 @@ The web application is designed with a user-friendly UI and seamless user intera
 
 ### Built With
 
-[![My Skills](https://skillicons.dev/icons?i=js,html,css,nodejs,expressjs,mongo, googlecloud,aws,figma)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=js,html,css,nodejs,expressjs,mongo,googlecloud,aws,figma)](https://skillicons.dev)
 
 * Javascript
 * HTML
