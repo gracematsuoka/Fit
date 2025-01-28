@@ -8,7 +8,7 @@ const GOOGLE_CLIENT_SECRET = "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"
 passport.use(new GoogleStrategy({
     clientID: GOOGLE_CLIENT_ID,
     clientSecret: GOOGLE_CLIENT_SECRET,
-    callbackURL: "http://fit-gracematsuoka.com:3000/auth/google/callback"
+    callbackURL: "https://fit-gracematsuoka.com/auth/google/callback"
   },
   async (accessToken, refreshToken, profile, done) => {
     // Handle the user profile

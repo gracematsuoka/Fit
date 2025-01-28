@@ -31,7 +31,7 @@ The web application is designed with a user-friendly UI and seamless user intera
 
 ### Built With
 
-[![My Skills](https://skillicons.dev/icons?i=js,html,css,nodejs,expressjs,mongo,figma)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=js,html,css,nodejs,expressjs,mongo, googlecloud,figma)](https://skillicons.dev)
 
 * Javascript
 * HTML
@@ -39,6 +39,7 @@ The web application is designed with a user-friendly UI and seamless user intera
 * Node.js
 * Express.js
 * MongoDB
+* Google Cloud
 * Figma
 
 ## 🔑 Key Features
