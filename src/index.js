@@ -463,8 +463,7 @@ app.get("/closet", isLoggedIn, async (req, res) => {
     }
 })
 
-const uri = "mongodb://localhost:27017/outfit_finder";
-const client = new MongoClient(uri)
+const client = new MongoClient(process.env.MONGO_URI);
 
 async function filterClothes(genderFilt) {
     try {
