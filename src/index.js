@@ -498,7 +498,7 @@ app.post("/closet", isLoggedIn, async (req, res) => {
             gender: item.index_name
         }))
         const clothesJson = JSON.stringify(lessClothes, null, 2);
-        console.log(lessClothes)
+        // console.log(lessClothes)
 
         const openai = new OpenAI({
             apiKey: process.env.OPENAI_API_KEY,
@@ -529,7 +529,7 @@ app.post("/closet", isLoggedIn, async (req, res) => {
                         `
                 }]
             });
-            //console.log(response)
+            console.log(response)
 
             let chat = response.choices[0].message.content;
             console.log(chat)
@@ -538,7 +538,6 @@ app.post("/closet", isLoggedIn, async (req, res) => {
             newChat = chat.slice(first, last);
 
             const chatResponse = JSON.parse(newChat);
-            //console.log(chatResponse);
             res.json({success: true, chatResponse})
         }
         catch (err) {

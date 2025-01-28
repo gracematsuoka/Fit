@@ -344,6 +344,8 @@ h2 span{
     font-weight: normal;
     letter-spacing: 0;
     display: none;
+    background-color: var(--med-tan);
+    border-radius: 15px;
 }
 
 .outfits-page .fit-result .sidebar h2{
