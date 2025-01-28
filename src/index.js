@@ -468,7 +468,7 @@ const client = new MongoClient(process.env.MONGO_URI);
 async function filterClothes(genderFilt) {
     try {
         await client.connect();
-        const db = client.db("outfit_finder");
+        const db = client.db("fit");
         const Clothes = db.collection("clothes");
 
         return await Clothes.find({
@@ -529,7 +529,7 @@ app.post("/closet", isLoggedIn, async (req, res) => {
                         `
                 }]
             });
-            console.log(response)
+            //console.log(response)
 
             let chat = response.choices[0].message.content;
             console.log(chat)
@@ -538,7 +538,7 @@ app.post("/closet", isLoggedIn, async (req, res) => {
             newChat = chat.slice(first, last);
 
             const chatResponse = JSON.parse(newChat);
-            console.log(chatResponse);
+            //console.log(chatResponse);
             res.json({success: true, chatResponse})
         }
         catch (err) {
