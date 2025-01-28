@@ -484,7 +484,7 @@ async function filterClothes(genderFilt) {
 app.post("/closet", isLoggedIn, async (req, res) => {
     try {
         const {weather, age, occasion, formality} = req.body;
-        const genderFilt = req.user.gender === "female" // syntax: condition ? valueIfTrue : valueIfFalse;
+        const genderFilt = req.user.gender === "female" 
             ? ["Ladieswear", "Divided", "Ladies Accessories"]
             : req.user.gender === "male"
             ? ["Menswear"]
