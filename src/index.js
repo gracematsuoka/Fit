@@ -10,6 +10,8 @@ const OpenAI = require("openai");
 const dotenv = require("dotenv");
 const csv = require("csv-parser");
 const fs = require("fs");
+const cors = require("cors");
+app.use(cors({ origin: "https://fit-gracematsuoka.com" }));
 
 dotenv.config();
 const app = express();
