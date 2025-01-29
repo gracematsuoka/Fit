@@ -8,8 +8,8 @@
 }
 
 html{
-    overflow-x: scroll;
-    overflow-y: hidden;
+    overflow:auto;
+    height: 100%;
 }
 
 *{
@@ -24,25 +24,30 @@ body{
     background-color: #F5F3ED;
 }
 
-.divider{
-    width: 5px;
-    height: auto;
-    display: inline-block;
+.logo {
+    position: absolute;
+    padding-top: 20px;
+    padding-left: 20px;
+    z-index: -2
 }
 
 .logo img{
     width: 40px;
     height: auto;
-    position: absolute;
-    left: 26px; top: 18px;
-    z-index: -2;
+}
+
+.main__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    height: 100vh;
+    padding-left: 60px;
 }
 
 .main__header h1{
     font-size: 96px;
     width: 900px;
-    position: absolute;
-    left: 60px; top: 300px;
 }
 
 .main__header span{
@@ -51,15 +56,12 @@ body{
 
 .main__header p{
     font-size: 36px;
-    position: absolute;
-    left: 70px; top: 424px;
 }
 
 .main__button{
     font-size: 22px;
-    position: absolute;
-    left: 70px; top: 485px;
-    gap: 20px
+    display: flex;
+    gap: 10px;
 }
 
 .main__button button{
@@ -77,42 +79,28 @@ body{
     text-decoration: none;
 }
 
+.main__images {
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    height: 100vh;
+    overflow-y: hidden;
+    z-index: -1;
+}
+
 .main__images img{
-    width: 219px;
+    max-width: 219px;
     height: auto;
+    object-fit: contain;
 }
 
-#bagl {
-    position: absolute;
-    left: 1071px; top: -7px;
-}
-
-#shoe {
-    position: absolute;
-    left: 1315px; top: 435px;
-}
-
-#heels {
-    position: absolute;
-    left: 1071px; top: 281px;
-}
-
-#dress {
-    position: absolute;
-    left: 1315px; top: -141px;
-}
-
-#jacket {
-    position: absolute;
-    left: 1315px; top: 147px;
-}
-
-#blazer {
-    position: absolute;
-    left: 1071px; top: 569px;
-}
-
-#bagr {
-    position: absolute;
-    left: 1315px; top: 723px;
+.picture-right, .picture-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px
 }
