@@ -1,3 +1,7 @@
+/**
+ * Filters unnecessary data in articles.csv and outputs the resulting compressed file in hm_filtered.csv
+ */
+
 import csvWriter from "csv-writer"
 import csv from "csv-parser"
 import fs from "fs"

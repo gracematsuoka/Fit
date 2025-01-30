@@ -92,7 +92,7 @@ body{
 }
 
 .main__images img{
-    max-width: 219px;
+    width: 219px;
     height: auto;
     object-fit: contain;
 }
